@@ -15,7 +15,16 @@ export const HomePage = () => {
   return (
     <div className="container">
       {Array.isArray(jokes)
-        ? jokes.map((joke) => <Joke {...joke} key={joke.id} />)
+        ? jokes.map((joke) => (
+            <Joke
+              userAvatar={joke.avatar}
+              userName={joke.name}
+              text={joke.text}
+              likes={joke.likes}
+              dislikes={joke.dislikes}
+              key={joke.id}
+            />
+          ))
         : null}
     </div>
   );

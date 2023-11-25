@@ -3,7 +3,7 @@ import { useState } from "react";
 import upLikeImg from "./img/like-up.png";
 import downLikeImg from "./img/like-down.png";
 
-const Joke = ({ avatar, name, text, likes, dislikes }) => {
+const Joke = ({ userAvatar, userName, text, likes, dislikes }) => {
   const [upLikes, setUpLikes] = useState(likes);
   const [downLikes, setDownLikes] = useState(dislikes);
   const changeLikes = (n) => {
@@ -17,8 +17,12 @@ const Joke = ({ avatar, name, text, likes, dislikes }) => {
     <div className="joke">
       <div className="joke__body">
         <div className="joke__user">
-          <img className="user-avatar" src={avatar} alt={name + " avatar"} />
-          <p className="user-name">{name}</p>
+          <img
+            className="user-avatar"
+            src={userAvatar}
+            alt={userName + " avatar"}
+          />
+          <p className="user-name">{userName}</p>
         </div>
 
         <p className="joke__text">{text}</p>
