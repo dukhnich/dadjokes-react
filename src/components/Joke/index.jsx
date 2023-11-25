@@ -1,5 +1,7 @@
 import "./style.css";
 import { useState } from "react";
+import upLikeImg from "./img/like-up.png";
+import downLikeImg from "./img/like-down.png";
 
 const Joke = () => {
   const [upLikes, setUpLikes] = useState(0);
